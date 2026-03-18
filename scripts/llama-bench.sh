@@ -1,5 +1,4 @@
 ##!/bin/bash
-
 TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 RESULTS_FILE="$HOME/benchmarks/benchmark_result_$TIMESTAMP"
 VRAM_LOG="$HOME/benchmarks/vram_log.csv"
@@ -8,7 +7,6 @@ echo -e "\n Benchmark has started, please wait. \n"
 
 echo -e "---------- Benchmark Start ----------" >> "$VRAM_LOG"
 echo -e "Timestamp: $TIMESTAMP" >> "$VRAM_LOG"
-
 
 # run nvidia-smi in background and safe PID
 nvidia-smi \
@@ -19,7 +17,6 @@ MONITOR_PID=$!
 
 # wait 0.5 seconds before benchmarking. Just to be sure
 sleep 0.5
-
 
 echo -e "---------- Benchmark Start ----------" >> "$RESULTS_FILE"
 
@@ -48,6 +45,5 @@ echo -e "----------- Benchmark End -----------\n\n" >> "$VRAM_LOG"
 
 # terminate nvidia-smi PID
 kill $MONITOR_PID
-
 
 echo -e "\n Done. Results are in $RESULTS_FILE \n"
