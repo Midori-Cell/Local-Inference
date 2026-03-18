@@ -1,10 +1,8 @@
 #!/bin/bash
-
 TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 VRAM_LOG="$HOME/benchmarks-server/vram_log-${TIMESTAMP}.csv"
 RESULTS_FILE_RAW="$HOME/benchmarks-server/benchmarks-results-server-raw-${TIMESTAMP}.json"
 RESULTS_FILE_SUMMARY="$HOME/benchmarks-server/benchmarks-results-server-summary-${TIMESTAMP}.json"
-
 
 # run nvidia-smi in background and safe PID
 nvidia-smi \
@@ -15,7 +13,6 @@ MONITOR_PID=$!
 
 # wait 0.5 seconds before benchmarking. Just to be sure
 sleep 0.5
-
 
 echo -e "\n Benchmark has started, please wait. \n"
 
@@ -31,7 +28,6 @@ echo -e "\n------- Server Configuration --------" >> "$RESULTS_FILE_SUMMARY"
 # adds your server configuration at the end of the logging files
 cat ./llama-server-for-benchmarking.sh >> "$RESULTS_FILE_RAW"
 cat ./llama-server-for-benchmarking.sh >> "$RESULTS_FILE_SUMMARY"
-
 
 # terminate nvidia-smi PID
 kill $MONITOR_PID
