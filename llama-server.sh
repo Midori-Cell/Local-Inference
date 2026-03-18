@@ -1,0 +1,12 @@
+~/llama.cpp/llama-server \
+   	--threads 15 \
+	--cache-type-k q4_0 \
+   	--temp 0.3 \
+ 	--ctx-size 16384 \
+	--flash-attn 0 \
+  	--n-gpu-layers 9999 \
+	--poll 100 \
+	--models-dir ~/models/ \
+	--models-max 1 \
+	--verbose \
+	--metrics \

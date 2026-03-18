@@ -1,0 +1,11 @@
+~/llama.cpp/llama-server \
+   	--threads 15 \
+	--cache-type-k q4_0 \
+   	--temp 0.3 \
+ 	--ctx-size 16384 \
+	--flash-attn 1 \
+  	--n-gpu-layers 9999 \
+	--poll 100 \
+	--model ~/models/gpt-oss-20b.gguf \
+	--verbose \
+	--metrics \
