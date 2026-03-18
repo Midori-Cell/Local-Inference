@@ -31,9 +31,9 @@ GGML_CUDA_GRAPH_OPT=1
 	--tensor-split 2/1.8/1.80/1.9 \
 	--split-mode layer \
 	--cache-type-k q4_0 \
-        --cache-type-v f16 \
+    --cache-type-v f16 \
 	--flash-attn 0 \
-        -ot ".ffn_(down)_exps.=CPU" \
+    -ot ".ffn_(down)_exps.=CPU" \
 	--ubatch-size 416 \
 	--n-cpu-moe 4 \
 	--verbose \
