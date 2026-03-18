@@ -37,7 +37,7 @@ This starts llama-cli (command-line inference) with a specific model and some op
 <br /> You find information about the options here: https://github.com/ggml-org/llama.cpp/blob/master/tools/completion/README.md
 
 ### llama-server.sh
-Starts the HTTP server. Meant for inference. With this version you can dynamically select the models in the integrated web UI. 
+Starts the HTTP server. Meant for inference. With this version you can dynamically select the models in the integrated web UI. You can access it at http://localhost:8080/ in your browser.
 <br /> Options: https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md
 
 ### llama-bench.sh
